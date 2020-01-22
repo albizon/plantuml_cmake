@@ -1,0 +1,23 @@
+FROM debian:buster
+MAINTAINER Alexis BIZON
+LABEL	name="plantuml_cmake" \
+	version="v1.0"
+
+ENV	OUTPUT_TYPE=svg \
+	ENTRYPOINT_PLANTUML_FILE=in.uml \
+	DEBIAN_FRONTEND=noninteractive
+
+RUN	apt-get -y update && \
+	apt-get -y install plantuml && \
+	apt-get -y install python && \
+	apt-get -y install graphviz && \
+	apt-get -y install cmake && \
+	apt-get -y install make
+
+RUN	mkdir /plantuml
+
+COPY	entrypoint.sh /
+
+VOLUME	["/plantuml/user_content"]
+
+ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
