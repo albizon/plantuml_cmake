@@ -15,4 +15,4 @@ cd /plantuml
 
 echo "Compilation du plantuml"
 
-java -jar plantuml.jar -o /latex/user_content/output -t${OUTPUT_TYPE} ${ENTRYPOINT_PLANTUML_FILE}
+java -jar ./plantuml.jar -o /latex/user_content/output -t${OUTPUT_TYPE} ${ENTRYPOINT_PLANTUML_FILE}

@@ -14,7 +14,9 @@ RUN	apt-get -y update && \
 	apt-get -y install cmake && \
 	apt-get -y install make
 
-RUN	mkdir /plantuml
+RUN     mkdir /plantuml
+
+RUN	wget "https://netix.dl.sourceforge.net/project/plantuml/plantuml.jar" -O /plantuml/plantuml.jar 
 
 COPY	entrypoint.sh /
 
