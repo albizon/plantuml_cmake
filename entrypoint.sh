@@ -15,4 +15,9 @@ cd /plantuml
 
 echo "Compilation du plantuml"
 
-java -jar ./plantuml.jar -o /latex/user_content/output -t${OUTPUT_TYPE} ${ENTRYPOINT_PLANTUML_FILE}
+java -jar ./plantuml.jar -o /plantuml/user_content/output -t${OUTPUT_TYPE} ${ENTRYPOINT_PLANTUML_FILE}
+
+echo "Changement des droits sur les fichiers de sortie"
+
+chmod -R 666 /plantuml/user_content
+
