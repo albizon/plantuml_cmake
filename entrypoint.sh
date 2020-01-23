@@ -19,5 +19,6 @@ java -jar ./plantuml.jar -o /plantuml/user_content/output -t${OUTPUT_TYPE} ${ENT
 
 echo "Changement des droits sur les fichiers de sortie"
 
-chmod -R 666 /plantuml/user_content
+chmod -R 777 /plantuml/user_content/output
 
+chmod 777 /plantuml/user_content/output
