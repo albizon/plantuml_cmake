@@ -14,7 +14,7 @@ RUN	apt-get -y update && \
 	apt-get -y install cmake && \
 	apt-get -y install make
 
-RUN	apt-get -y install ca-certificate && \
+RUN	apt-get -y install ca-certificates && \
 	apt-get -y install wget
 
 RUN     mkdir /plantuml
